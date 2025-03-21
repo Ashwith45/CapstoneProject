@@ -1,0 +1,206 @@
+/* General Page Styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+/* Admin Profile Container */
+
+.admin-profile {
+    max-width: 950px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a3d62;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9f43;
+}
+
+.logout-btn {
+    background: #ff4757;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #e84118;
+}
+
+
+/* Admin Details */
+
+.admin-details {
+    background: #f4f7fc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.admin-details h2 {
+    color: #0a3d62;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+
+/* Employees List */
+
+.employee-list {
+    list-style: none;
+    padding: 0;
+}
+
+.employee-item {
+    background: white;
+    padding: 12px;
+    border-left: 5px solid #10ac84;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.employee-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.history-btn {
+    background: #0a3d62;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s;
+}
+
+.history-btn:hover {
+    background: #0652dd;
+}
+
+
+/* Task History Modal */
+
+.task-history-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.task-history-modal h2 {
+    color: #0a3d62;
+    font-size: 22px;
+    text-align: center;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background: white;
+    padding: 12px;
+    border-left: 5px solid #e67e22;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.task-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Close Button */
+
+.close-btn {
+    background: #e84118;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.close-btn:hover {
+    background: #c23616;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .admin-profile {
+        padding: 15px;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .employee-item,
+    .task-item {
+        flex-direction: column;
+        text-align: left;
+    }
+}

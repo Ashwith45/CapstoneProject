@@ -1,0 +1,222 @@
+Data Flow Diagram (DFD) for Agile Track System
+
+Level 0 - Context Diagram (High-Level Overview)
+
+    Description : At the highest level, the Agile Track System allows Admins to create and manage Scrum Teams, assign tasks, and track progress. Employees (Users) can view assigned tasks, update their statuses, and track progress.
+
+DFD Level 0 Diagram Structure
+         
+                +-------------------------------+
+                |  External Entities            |
+                |  - Admin                      |
+                |  - Employee (User)            |
+                +-------------------------------+
+                        |  
+                        v  
+                +-------------------------------+
+                |   Agile Track System (1.0)    |
+                |   (Processes requests & data) |
+                +-------------------------------+
+                        |  
+                        v  
+                +---------------------------------+
+                |  Data Store: User & Scrum DB   |
+                |  (Stores Users, Tasks, Scrums) |
+                +---------------------------------+
+
+Data Flow Explanation
+1.Admin:
+
+    Logs into the system.
+    Creates Scrum Teams.
+    Assigns tasks to employees.
+    Monitors progress.
+
+2.Employee (User):
+
+    Logs in to view assigned tasks.
+    Updates task status.
+    Tracks progress.
+
+3.Agile Track System (Process 1.0):
+
+    Processes login, task management, and status tracking.
+
+4.Data Store (User & Scrum DB):
+
+    Stores users, tasks, and scrums.
+
+Level 1 DFD (Breakdown of Agile Track System)
+Description:
+    The system consists of multiple sub-processes like authentication, scrum management, task handling, and status tracking.
+
+DFD Level 1 Diagram Structure
+      
+            +---------------------------------------+
+            |         External Entities             |
+            |  - Admin                              |
+            |  - Employee (User)                    |
+            +---------------------------------------+
+                    |                                      
+                    v                                      
+            +-------------------------------------------+
+            |  Process 1.1 - User Authentication        |
+            |  (Login/Signup - Verifies Credentials)   |
+            +-------------------------------------------+
+                    |  
+                    v  
+            +-------------------------------------------+
+            |  Process 1.2 - Scrum Management          |
+            |  (Admin Creates/Edits Scrum Teams)       |
+            +-------------------------------------------+
+                    |  
+                    v  
+            +-------------------------------------------+
+            |  Process 1.3 - Task Assignment & Viewing  |
+            |  (Admin Assigns & User Views Tasks)      |
+            +-------------------------------------------+
+                    |  
+                    v  
+            +-------------------------------------------+
+            |  Process 1.4 - Task Status Tracking      |
+            |  (Users Update & Admin Tracks Progress)  |
+            +-------------------------------------------+
+                    |  
+                    v  
+            +-------------------------------------------+
+            |  Data Store: User & Scrum DB             |
+            |  (Stores Users, Tasks, Scrum Data)       |
+            +-------------------------------------------+
+
+Data Flow Steps
+1.User Authentication (Process 1.1)
+
+    Users log in or sign up.
+    System validates credentials.
+    Redirects users to the appropriate dashboard (Admin/User).
+
+2.Scrum Management (Process 1.2)
+
+    Admin creates/edit Scrum Teams.
+    Assigns users to scrums.
+
+3.Task Assignment & Viewing (Process 1.3)
+
+    Admin assigns tasks to users.
+    Users view assigned tasks.
+
+4.Task Status Tracking (Process 1.4)
+
+    Users update task statuses (To-Do, In Progress, Done).
+    Admin monitors progress.
+
+5.Data Store (User & Scrum DB)
+
+    Stores login credentials, scrums, tasks, and statuses.
+
+Level 2 DFD (Detailed Process Breakdown)
+
+In Level 2, we break down the internal steps of each process.
+
+Process 1.1 - User Authentication (Login/Signup)
+
+        +---------------------------------------+
+        |   User Authentication (1.1)           |
+        +---------------------------------------+
+                |
+                v
+        +---------------------------------------+
+        |   1.1.1 User enters login details     |
+        +---------------------------------------+
+                |
+                v
+        +---------------------------------------+
+        |   1.1.2 System verifies credentials   |
+        +---------------------------------------+
+                |
+                v
+        +---------------------------------------+
+        |   1.1.3 Redirect to Dashboard         |
+        +---------------------------------------+
+
+Process 1.2 - Scrum Management
+
+        +---------------------------------------+
+        |   Scrum Management (1.2)              |
+        +---------------------------------------+
+                |
+                v
+        +---------------------------------------+
+        |   1.2.1 Admin creates Scrum Team      |
+        +---------------------------------------+
+                |
+                v
+        +---------------------------------------+
+        |   1.2.2 Assign users to Scrum         |
+        +---------------------------------------+
+                |
+                v
+        +---------------------------------------+
+        |   1.2.3 Save data in database         |
+        +---------------------------------------+
+
+Process 1.3 - Task Assignment & Viewing
+
+        +-------------------------------------------+
+        |   Task Assignment & Viewing (1.3)        |
+        +-------------------------------------------+
+                |
+                v
+        +-------------------------------------------+
+        |   1.3.1 Admin assigns tasks to users     |
+        +-------------------------------------------+
+                |
+                v
+        +-------------------------------------------+
+        |   1.3.2 Users view assigned tasks        |
+        +-------------------------------------------+
+                |
+                v
+        +-------------------------------------------+
+        |   1.3.3 Save tasks in database           |
+        +-------------------------------------------+
+
+Process 1.4 - Task Status Tracking
+
+        +-------------------------------------------+
+        |   Task Status Tracking (1.4)             |
+        +-------------------------------------------+
+                |
+                v
+        +-------------------------------------------+
+        |   1.4.1 Users update task status         |
+        +-------------------------------------------+
+                |
+                v
+        +-------------------------------------------+
+        |   1.4.2 System updates database          |
+        +-------------------------------------------+
+                |
+                v
+        +-------------------------------------------+
+        |   1.4.3 Admin monitors progress          |
+        +-------------------------------------------+
+
+Final Summary of Data Flow
+
+1.Admin Role:
+
+    Creates Scrum Teams.
+    Assigns tasks.
+    Tracks progress.
+
+2.User Role:
+
+    Views tasks.
+    Updates task status.
+
+3.System:
+
+    Manages scrums and tasks.
+    Authenticates users.
+    Stores all data in the database.
