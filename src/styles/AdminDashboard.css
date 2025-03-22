@@ -1,0 +1,198 @@
+/* General Styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+/* Admin Dashboard Container */
+
+.admin-dashboard {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a3d62;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9f43;
+}
+
+.logout-btn {
+    background: #ff4757;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #e84118;
+}
+
+
+/* Add Scrum Button */
+
+.add-scrum-btn {
+    background: #10ac84;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0;
+    display: block;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-scrum-btn:hover {
+    background: #1dd1a1;
+}
+
+
+/* Scrum Form */
+
+.scrum-form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.scrum-form h2 {
+    color: #0a3d62;
+}
+
+.scrum-form input,
+.scrum-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.create-btn {
+    background: #0a3d62;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.create-btn:hover {
+    background: #1e5799;
+}
+
+
+/* Scrum Teams List */
+
+.scrum-teams-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.scrum-teams-list li {
+    background: white;
+    padding: 15px;
+    border-left: 5px solid #0a3d62;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Scrum Team Name */
+
+.scrum-teams-list li h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #0a3d62;
+}
+
+
+/* Get Details Button Below Scrum Team Name */
+
+.details-btn {
+    background: #0a3d62;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 10px;
+    /* Space between name and button */
+    width: 100px;
+}
+
+.details-btn:hover {
+    background: #1e5799;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .admin-dashboard {
+        padding: 15px;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .scrum-teams-list li {
+        text-align: center;
+        padding: 10px;
+    }
+}
